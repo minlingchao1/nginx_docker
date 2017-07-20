@@ -75,7 +75,7 @@ RUN cd /root \
 && rm -rf /usr/src/zlib=1.2.11 \
 # forward request and error logs to docker log collector
 && ln -sf /dev/stdout /var/log/nginx/access.log \
-&& ln -sf /dev/stderr /var/log/nginx/error.log 
+&& ln -sf /dev/stderr /var/log/nginx/error.log \
 && apt-get remove -y git curl \
 && apt-get clean
 

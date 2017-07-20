@@ -78,8 +78,8 @@ RUN apk add --no-cache --virtual .build-deps \
 && ln -sf /dev/stdout /var/log/nginx/access.log \
 && ln -sf /dev/stderr /var/log/nginx/error.log
 
-ADD ../nginx.conf /etc/nginx/nginx.conf
-ADD ../nginx.www.conf /etc/nginx/conf.d/default.conf
+ADD nginx.conf /etc/nginx/nginx.conf
+ADD nginx.www.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 WORKDIR /usr/sbin
